@@ -6,8 +6,15 @@ body {
     background: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
 }
 
-h2 {
+h1 {
     color: blue;
+    font-family: 'Noto Serif', serif;
+}
+
+h2, h3 {
+    color: black;
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
 }
 
 .question-wrapper, .options-wrapper {
@@ -15,5 +22,25 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+}
+
+.choice {
+    background-color: #71d5f3;
+    height: 10%;
+    width: 350px;
+    padding: 10px 40px 15px 40px;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+    color: rgb(20, 1, 1);
+    font-family: 'Noto Serif', serif;
+}
+
+.choice:hover {
+    cursor: pointer;
+    background-color: #040280;
+    color: whitesmoke; 
+    font-family: 'Noto Serif', serif;
+
 }
 
