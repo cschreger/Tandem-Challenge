@@ -38,7 +38,6 @@ h2, h3 {
 
 .choice:hover {
     cursor: pointer;
-    /* background-color: #040280; */
     color: whitesmoke; 
     font-family: 'Noto Serif', serif;
 
@@ -55,6 +54,24 @@ h2, h3 {
 
 .total-score {
     font-weight: 700;
+}
+
+.new-game {
+    margin-top: 15px;
+    background-color: indigo;
+    color: whitesmoke;
+    border-radius: 3px;
+    padding: 8px;
+    font-family: 'Noto Serif', serif;
+}
+
+.new-game-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+    font-family: 'Noto Serif', serif;
 }
 
 
