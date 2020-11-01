@@ -119,4 +119,5 @@ const quizQuestions = (options) =>{
         return options;
     }
 
+    
 export default quizQuestions(questions);

@@ -45,27 +45,50 @@ export class Quiz extends React.Component {
         })
     }
 
+    update = () => {
+            debugger
+            this.setState({
+                currIndex: this.state.currIndex += 1,
+                questionNum: this.state.questionNum += 1,
+                question: quizQuestions[this.state.currIndex].question,
+                options: this.answerShuffle(
+                    quizQuestions[this.state.currIndex].incorrect, 
+                    quizQuestions[this.state.currIndex].correct
+                ),
+                answer: quizQuestions[this.state.currIndex].correct
+            })
+    }
+
 
     handleNextQuestion = (choice) => {
         const {answer} = this.state;
 
         if (choice === answer) {
+            let choices = document.getElementsByClassName('choice')
+            debugger
+            Array.from(choices).forEach(selection => {
+                if (selection.innerHTML === answer){
+                    selection.setAttribute("background-color", 'green')
+                }
+            })
+            debugger
             this.setState ({
                 score: this.state.score += 1,
                 roundScore: this.state.roundScore += 1
             })
-        } 
+        } else {
+            let choices = document.getElementsByClassName('choice')
+            debugger
+            Array.from(choices).forEach(selection => {
+                if (selection.innerHTML === answer){
+                    selection.setAttribute("background-color", 'green')
+                }
+            })
+        }
 
-        this.setState({
-            currIndex: this.state.currIndex += 1,
-            questionNum: this.state.questionNum += 1,
-            question: quizQuestions[this.state.currIndex].question,
-            options: this.answerShuffle(
-                quizQuestions[this.state.currIndex].incorrect, 
-                quizQuestions[this.state.currIndex].correct
-            ),
-            answer: quizQuestions[this.state.currIndex].correct
-        })
+
+        setTimeout(this.update, 1000)
+
 
         if (this.state.questionNum === 11){
             this.setState({
@@ -73,6 +96,7 @@ export class Quiz extends React.Component {
                 round: 2
             })
         }
+
     }
 
 
