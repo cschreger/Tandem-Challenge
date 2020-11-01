@@ -6,9 +6,8 @@ body {
     background: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
 }
 
-h1 {
-    color: blue;
-    font-family: 'Noto Serif', serif;
+h2 {
+    padding-top: 15px;
     text-decoration: underline;
 }
 
@@ -39,7 +38,7 @@ h2, h3 {
 
 .choice:hover {
     cursor: pointer;
-    background-color: #040280;
+    /* background-color: #040280; */
     color: whitesmoke; 
     font-family: 'Noto Serif', serif;
 
@@ -57,4 +56,5 @@ h2, h3 {
 .total-score {
     font-weight: 700;
 }
+
 

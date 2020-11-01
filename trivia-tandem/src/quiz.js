@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import quizQuestions from './quizQuestions';
 import './styles.css'
 
-export class Quiz extends React.Component {
+
+export class Quiz extends Component {
     constructor(props){
         super(props)
 
@@ -45,8 +46,25 @@ export class Quiz extends React.Component {
         })
     }
 
+
     update = () => {
-            debugger
+        let choices = document.getElementsByClassName('choice')
+        debugger
+        Array.from(choices).forEach(selection => {
+            if (selection.innerHTML === this.state.answer){
+                selection.setAttribute("style", 'background-color: #71d5f3;')
+                selection.setAttribute('class', 'choice')
+            }
+        })
+        debugger
+        if (this.state.questionNum === 2){
+            let appender = document.getElementById('total-score')
+            let newGame = document.createElement('button')
+            appender.appendChild(newGame)
+            newGame.innerHTML = 'New Game'
+            newGame.className = 'new-game'
+            newGame.addEventListener('click', this.loadQuiz())
+        } else {
             this.setState({
                 currIndex: this.state.currIndex += 1,
                 questionNum: this.state.questionNum += 1,
@@ -57,6 +75,14 @@ export class Quiz extends React.Component {
                 ),
                 answer: quizQuestions[this.state.currIndex].correct
             })
+        }
+
+        if (this.state.questionNum === 11){
+            this.setState({
+                roundScore: 0,
+                round: 2
+            })
+        }
     }
 
 
@@ -68,7 +94,7 @@ export class Quiz extends React.Component {
             debugger
             Array.from(choices).forEach(selection => {
                 if (selection.innerHTML === answer){
-                    selection.setAttribute("background-color", 'green')
+                    selection.setAttribute("style", 'background-color: green;')
                 }
             })
             debugger
@@ -81,31 +107,13 @@ export class Quiz extends React.Component {
             debugger
             Array.from(choices).forEach(selection => {
                 if (selection.innerHTML === answer){
-                    selection.setAttribute("background-color", 'green')
+                    selection.setAttribute("style", 'background-color: green;')
                 }
             })
         }
 
 
         setTimeout(this.update, 1000)
-
-
-        if (this.state.questionNum === 11){
-            this.setState({
-                roundScore: 0,
-                round: 2
-            })
-        }
-
-    }
-
-
-    gameFinish = () => {
-        return (
-            <div>
-                Thank you for playing!! 
-            </div>
-        )
     }
 
 
@@ -114,8 +122,7 @@ export class Quiz extends React.Component {
 
         return (
         <div className='question-wrapper'>
-            <h1>Round {round}</h1> 
-            <h2>Question {`${questionNum > 10 ? questionNum - 10 : questionNum}`} of 10</h2>
+            <h2>Round {round}: Question {`${questionNum > 10 ? questionNum - 10 : questionNum}`} of 10</h2>
             <h3>{question}</h3>
 
             <div className='options-wrapper'>
@@ -130,7 +137,7 @@ export class Quiz extends React.Component {
                 <span>{roundScore}</span>
             </div>
 
-            <div className='total-score'>
+            <div id ='total-score' className='total-score'>
                 <span>Total Score: </span>
                 <span>{score}</span>
             </div>
@@ -139,5 +146,6 @@ export class Quiz extends React.Component {
         )
     }
 }
+
 
 export default Quiz;
