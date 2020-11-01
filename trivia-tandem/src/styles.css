@@ -9,6 +9,7 @@ body {
 h1 {
     color: blue;
     font-family: 'Noto Serif', serif;
+    text-decoration: underline;
 }
 
 h2, h3 {
@@ -42,5 +43,18 @@ h2, h3 {
     color: whitesmoke; 
     font-family: 'Noto Serif', serif;
 
+}
+
+.round-score, .total-score {
+    font-family: 'Noto Serif', serif;
+    padding-top: 40px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.total-score {
+    font-weight: 700;
 }
 
