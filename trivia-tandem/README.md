@@ -1,6 +1,6 @@
 # Tandem Trivia
 
-**Intro**
+**Intro**:<br/>
 Welcome to Tandem Trivia - a single-page React application created as part of Tandem's 2020 Apprenticeship application process!
 
 **Challenge Prompt:** <br/>
