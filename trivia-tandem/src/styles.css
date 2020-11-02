@@ -74,4 +74,12 @@ h2, h3 {
     font-family: 'Noto Serif', serif;
 }
 
+.new-game-wrapper > div {
+    padding-bottom: 25px;
+    font-family: 'Noto Serif', serif;
+}
 
+.final-score {
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+}

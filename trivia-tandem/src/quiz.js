@@ -129,18 +129,18 @@ export class Quiz extends Component {
         })
     }
 
-    
+
 
     render() {
         const {options, question, score, roundScore, round, questionNum} = this.state;
 
-        if (this.state.questionNum === 21) {
+        if (this.state.questionNum === 2) {
             return (
                 <div className='new-game-wrapper'>
                 <div>Thank you for playing!</div>
-                <div>Round 1 Score: {this.state.score - this.state.roundScore}</div>
-                <div>Round 2 Score: {this.state.roundScore}</div>
-                <div>Final Score: {this.state.score} / 20</div>
+                <div>Round 1 Score: {this.state.score - this.state.roundScore} / 10</div>
+                <div>Round 2 Score: {this.state.roundScore} / 10</div>
+                <div className='final-score'>Final Score: {this.state.score} / 20</div>
                     <button className= 'new-game' onClick={() => this.newGame()}>New Game</button>
                 </div>
             )
