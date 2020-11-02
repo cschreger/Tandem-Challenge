@@ -9,10 +9,10 @@ Welcome to Tandem Trivia - a single-page React application created as part of Ta
   We would also like to see a README which includes any information about how to run the code, any known issues or complexity we should look out for, and any additional features you would like to have added to make your trivia app even more awesome.
 
 **Assumptions:**<br/>
-- A round of trivia has 10 Questions
-- All questions are multiple-choice questions
-- Your score does not need to update in real time
-- Results can update on form submit, button click, or any interaction you choose
+- A round of trivia has 10 Questions.
+- All questions are multiple-choice questions.
+- Your score does not need to update in real time.
+- Results can update on form submit, button click, or any interaction you choose.
 - We will provide you with the trivia data such as the questions, correct and incorrect answers via a JSON file.
 
 **Acceptance Criteria:**<br/>
@@ -21,7 +21,7 @@ Welcome to Tandem Trivia - a single-page React application created as part of Ta
 - Questions should not repeat in a round.
 - A user can select only 1 answer out of the 4 possible answers.
 - The correct answer must be revealed after a user has submitted their answer.
-- A user can see the score they received at the end of the round
+- A user can see the score they received at the end of the round.
 
 
 # Instructions
@@ -33,8 +33,8 @@ If package.json.lock exists, delete package.json.lock
 
 **Steps 4-5:**<br>
 Run the following commands:<br>
-    npm install<br>
-    npm start
+- npm install
+- npm start
 
 **Step 6:**<br/>
 Enjoy and **good luck**!
