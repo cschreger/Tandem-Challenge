@@ -134,7 +134,7 @@ export class Quiz extends Component {
     render() {
         const {options, question, score, roundScore, round, questionNum} = this.state;
 
-        if (this.state.questionNum === 2) {
+        if (this.state.questionNum === 21) {
             return (
                 <div className='new-game-wrapper'>
                 <div>Thank you for playing!</div>
