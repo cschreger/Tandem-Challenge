@@ -1,7 +1,7 @@
 # Tandem Trivia
 
 **Intro**:<br/>
-Welcome to Tandem Trivia - a single-page React application created as part of Tandem's 2020 Apprenticeship application process!
+Welcome to Tandem Trivia - a single-page React application created as part of Tandem's 2021 Apprenticeship application process!
 
 **Challenge Prompt:** <br/>
   Your goal is to create an application that displays trivia questions with multiple-choice answers to select from. <br/><br/>
@@ -45,3 +45,11 @@ React.js<br>
 JavaScript<br>
 HTML5<br>
 CSS3
+
+# Future Steps:
+
+- Multiplayer Feature (turn-based)
+- Ability to go back to questions after answering
+- 50/50 lifeline feature
+- User ability to set rounds/questions per round
+
