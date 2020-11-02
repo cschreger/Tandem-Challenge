@@ -10,17 +10,17 @@ We would also like to see a README which includes any information about how to r
 
 # Instructions
 
-**Steps 1-2:**<br>
+**Steps 1-3:**<br>
 Clone/Download repo<br>
-Open terminal and cd into root project folder(trivia-tandem)
-If package.json exists, delete package.json
+Open terminal and cd into root project folder(trivia-tandem)<br>
+If package.json.lock exists, delete package.json.lock
 
-**Steps 3-4:**<br>
+**Steps 4-5:**<br>
 Run the following commands:<br>
     npm install<br>
     npm start
 
-**Step 5:**<br/>
+**Step 6:**<br/>
 Enjoy and **good luck**!
 
 # Technologies/Libraries:
